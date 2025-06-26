@@ -9,7 +9,12 @@ def main():
     screen.fill("black")
     pygame.display.flip()
 
+    pygame.time.Clock()
+    dt = 0
+
+
     for event in pygame.event.get():
+        dt = pygame.time.Clock().tick(60) / 1000
         if event.type == pygame.QUIT:
             pygame.quit()
             return
